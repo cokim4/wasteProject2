@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="arealist">
+        <item> </item>
+        <item>여수</item>
+        <item>순천</item>
+        <item>광양</item>
+    </string-array>
+</resources>

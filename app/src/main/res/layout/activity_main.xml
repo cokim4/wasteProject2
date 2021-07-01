@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/m0linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mainview0"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/btnsetting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_setting" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/mainview0"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/m0linear"
+        app:layout_constraintBottom_toTopOf="@id/m1linear"/>
+
+
+    <LinearLayout
+        android:id="@+id/m1linear"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/search_border"
+        app:layout_constraintVertical_weight="2"
+        app:layout_constraintTop_toBottomOf="@id/mainview0"
+        app:layout_constraintBottom_toTopOf="@id/mainview1">
+
+        <EditText
+            android:id="@+id/m1search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="환 경 변 수"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/transparent"
+            android:layout_weight="4"/>
+
+        <Button
+            android:id="@+id/searchbtn"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/mainview1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/m1linear"
+        app:layout_constraintBottom_toTopOf="@id/m2linear"/>
+
+    <LinearLayout
+        android:id="@+id/m2linear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintVertical_weight="15"
+        app:layout_constraintTop_toBottomOf="@id/mainview1"
+        app:layout_constraintRight_toLeftOf="@id/m3linear"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/mnotice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="공지사항"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/noticebtn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/minfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘의 알림"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/areasetbtn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="20dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/m3linear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintVertical_weight="15"
+        app:layout_constraintTop_toBottomOf="@id/mainview1"
+        app:layout_constraintLeft_toRightOf="@id/m2linear"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/mbtnsort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="분 리 수 거"/>
+        <Button
+            android:id="@+id/mbtnbig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="대 형 폐 기 물"
+            android:layout_marginVertical="20dp"/>
+        <Button
+            android:id="@+id/mbtnfood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="음 식 물 쓰 레 기"
+            android:layout_marginBottom="20dp"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
